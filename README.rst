@@ -5,7 +5,7 @@ A Djanfo hello world example
 
 Followed by::
 
-    $ bin/django syncdb
+    $ python manage.py syncdb
 
 At which point you should see::
 
@@ -38,7 +38,7 @@ Followed by a prompt for your username and new password::
 
 After which you can run::
 
-    $ bin/django runserver
+    $ python manage.py runserver
 
 And open the following URL in your web browser:
 
