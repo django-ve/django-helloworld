@@ -1,7 +1,7 @@
 helloworld
 ==========
 
-A Djanfo hello world example
+A Django hello world example
 
 Followed by::
 
@@ -42,8 +42,11 @@ After which you can run::
 
 And open the following URL in your web browser:
 
- - http://127.0.0.1:8000/admin/
-
-And open the following URL in your web browser for see the hello world example:
-
  - http://127.0.0.1:8000/
+
+And you can see the hello world example like this :
+
+.. image:: docs/django_helloword.png
+   :width: 332px
+     :align: center
+     :alt: A Django 1.4 'Hello World' example
