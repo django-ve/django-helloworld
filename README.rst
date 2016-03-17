@@ -43,7 +43,7 @@ And open the following URL in your web browser:
 
 And you can see the hello world example like this :
 
-.. image:: https://github.com/django-ve/helloworld/raw/master/docs/django_helloword.png
+.. figure:: https://github.com/django-ve/helloworld/raw/master/docs/django_helloword.png
    :width: 332px
    :align: center
    :alt: A Django 'Hello World' example
