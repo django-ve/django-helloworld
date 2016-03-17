@@ -3,6 +3,7 @@
 *.pot
 *.pyc
 *.pyo
+helloworld.db
 local_settings.py
 *.egg-info
 *.EGG-INFO
