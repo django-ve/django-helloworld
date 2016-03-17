@@ -1,40 +1,37 @@
 helloworld
 ==========
 
-A Django hello world example
+A Django 'hello world' example.
 
-Followed by::
+For run this example need to install Django
+framework execute the follow command::
 
-    $ python manage.py syncdb
+    $ sudo pip install -r requirements.txt
+
+And later followed by::
+
+    $ python manage.py migrate
 
 At which point you should see::
 
-    Creating tables ...
-    Creating table auth_permission
-    Creating table auth_group_permissions
-    Creating table auth_group
-    Creating table auth_user_user_permissions
-    Creating table auth_user_groups
-    Creating table auth_user
-    Creating table auth_message
-    Creating table django_content_type
-    Creating table django_session
-    Creating table django_site
-    Creating table django_admin_log
-    
-Followed by a prompt for your username and new password::
-
-    You just installed Django's auth system, which means you don't have any
-    superusers defined.
-    Would you like to create one now? (yes/no): yes
-    Username (Leave blank to use 'admin'): admin
-    E-mail address: YOUREMAIL@EMAILSERVICE
-    Password: 
-    Password (again): 
-    Superuser created successfully.
-    Installing custom SQL ...
-    Installing indexes ...
-    No fixtures found.
+    Operations to perform:
+      Apply all migrations: admin, contenttypes, sites, auth, sessions
+    Running migrations:
+      Rendering model states... DONE
+      Applying contenttypes.0001_initial... OK
+      Applying auth.0001_initial... OK
+      Applying admin.0001_initial... OK
+      Applying admin.0002_logentry_remove_auto_add... OK
+      Applying contenttypes.0002_remove_content_type_name... OK
+      Applying auth.0002_alter_permission_name_max_length... OK
+      Applying auth.0003_alter_user_email_max_length... OK
+      Applying auth.0004_alter_user_username_opts... OK
+      Applying auth.0005_alter_user_last_login_null... OK
+      Applying auth.0006_require_contenttypes_0002... OK
+      Applying auth.0007_alter_validators_add_error_messages... OK
+      Applying sessions.0001_initial... OK
+      Applying sites.0001_initial... OK
+      Applying sites.0002_alter_domain_unique... OK
 
 After which you can run::
 
@@ -49,4 +46,6 @@ And you can see the hello world example like this :
 .. image:: https://github.com/django-ve/helloworld/raw/master/docs/django_helloword.png
    :width: 332px
    :align: center
-   :alt: A Django 1.4 'Hello World' example
+   :alt: A Django 'Hello World' example
+
+A Django 'Hello World' example
