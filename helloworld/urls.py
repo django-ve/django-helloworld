@@ -17,6 +17,9 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
     (r'^admin/', include(admin.site.urls)),
 
+    # Bhavesh!
+    (r'^bhavesh', 'helloworld.views.bhavesh'),
+
     # Hello, world!
     (r'', 'helloworld.views.index'),
 )
@@ -26,4 +29,3 @@ if settings.DEBUG:
         (r'^media/(?P<path>.*)$', 'django.views.static.serve',
          {'document_root': settings.MEDIA_ROOT}),
     )
-
