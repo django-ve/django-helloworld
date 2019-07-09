@@ -1,8 +1,8 @@
-=================
-django_helloworld
-=================
+==========
+helloworld
+==========
 
-A Django 'hello world' example.
+A Django '`Hello World <https://en.wikipedia.org/wiki/%22Hello,_World!%22_program>`_' program example.
 
 Installation
 ============
@@ -20,8 +20,7 @@ Install necessary minimum dependencies, with the following command:
 
 ::
 
-  $ sudo apt install python3-dev python3-pip python3-virtualenv \
-              sqlitebrowser
+  $ sudo apt install python3-dev python3-pip python3-virtualenv sqlitebrowser
 
 For run this example need to install Django
 framework execute the follow command:
@@ -67,8 +66,7 @@ for management, with the following command:
 
 ::
 
-    $ python3 manage.py createsuperuser --username admin \
-              --email admin@mail.com
+    $ python3 manage.py createsuperuser --username admin --email admin@mail.com
 
 At which point you should see:
 
@@ -95,6 +93,6 @@ And you can see the hello world example like this:
 .. figure:: https://github.com/django-ve/helloworld/raw/master/docs/django_helloword.png
    :width: 315px
    :align: center
-   :alt: A Django 'Hello World' example
+   :alt: A Django 'Hello World' program example
 
-   A Django 'Hello World' example
+   A Django 'Hello World' program example
