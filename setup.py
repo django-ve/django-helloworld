@@ -30,7 +30,7 @@ setup(
     platforms=['OS Independent'],
     classifiers=CLASSIFIERS,
     install_requires=[
-        'Django==2.1.1',
+        'Django==2.2.3',
     ],
     packages=find_packages(exclude=["project","project.*"]),
     include_package_data=True,
