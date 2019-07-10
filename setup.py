@@ -29,7 +29,7 @@ def read(fname):
         return f.read()
 
 setup(
-    name="helloworld",
+    name="django-helloworld",
     version="0.1",
     description="A Django 'Hello World' program example",
     long_description=read('README.rst'),
