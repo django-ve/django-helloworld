@@ -1,6 +1,6 @@
-==========
-helloworld
-==========
+=================
+django-helloworld
+=================
 
 A Django '`Hello World <https://en.wikipedia.org/wiki/%22Hello,_World!%22_program>`_' program example.
 
@@ -61,6 +61,7 @@ At which point you should see:
       Applying sites.0001_initial... OK
       Applying sites.0002_alter_domain_unique... OK
 
+
 For use the Django Admin Interface, it's needed to create a superuser 
 for management, with the following command:
 
@@ -84,15 +85,22 @@ After which you can run::
 
     $ python3 manage.py runserver
 
-And open the following URL in your web browser:
+Then, you can open the URL http://127.0.0.1:8000/ in your web browser and you can 
+see the hello world example like this:
 
- - http://127.0.0.1:8000/
-
-And you can see the hello world example like this:
-
-.. figure:: https://github.com/django-ve/helloworld/raw/master/docs/django_helloword.png
+.. figure:: https://github.com/django-ve/django-helloworld/raw/master/docs/django_helloword.png
    :width: 315px
    :align: center
    :alt: A Django 'Hello World' program example
 
    A Django 'Hello World' program example
+
+Also you can open in your web browser the URL http://127.0.0.1:8000/admin for access to 
+the *Django Admin Interface* like this:
+
+.. figure:: https://github.com/django-ve/django-helloworld/raw/master/docs/django_admin_interface_running.png
+   :width: 315px
+   :align: center
+   :alt: Django Admin Interface running
+
+   Django Admin Interface running
