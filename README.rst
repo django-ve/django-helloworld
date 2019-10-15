@@ -7,7 +7,7 @@ A Django '`Hello World <https://en.wikipedia.org/wiki/%22Hello,_World!%22_progra
 Installation
 ============
 
-You need install the pre-requirements for run this Hello World example.
+You need to install the pre-requirements for run this Hello World example.
 
 Update repositories of available packages to install, with
 the following command:
