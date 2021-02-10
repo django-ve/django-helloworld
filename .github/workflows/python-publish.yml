@@ -1,0 +1,27 @@
+# This workflow will upload a Python Package using Twine when a release is created
+# For more information see: https://help.github.com/en/actions/language-and-framework-guides/using-python-with-github-actions#publishing-to-package-registries
+
+name: Upload Python Package
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  deploy:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Django Security Check
+        # You may pin to the exact commit or the version.
+        # uses: victoriadrake/django-security-check@762dd0ab80194dbded70117daa32bd7d139c6a04
+        uses: victoriadrake/django-security-check@v1.1.0
+
+      - name: Checkout action
+        uses: actions/checkout@v2
+      - name: Django Coverage action
+        uses: actions/python-django-coverage-gitHub-action@0.9
+        with:
+          django-app: 'sample_app'
+          minimum-coverage: '86'
