@@ -2,6 +2,34 @@
 django-helloworld
 =================
 
+# Update - new steps -- START
+
+## Installation 
+
+To run you need docker and docker-compose installed on yours local mashine.
+
+## Run - local mashine
+
+Makefile have all management configuration to perform acction to run application localy.
+
+`make start` - will run docker-compose build, vulnerability scan and docker-compose start. 
+Web app will be avaliable under that address `http://django.localhost:8008/`. Treafik pdashboard - `http://127.0.0.1:8081/dashboard/#/`. 
+`make build` - will run docker-compose build
+`make stop` - will run docker-compose stop
+`make trivy-scan` - will run local docker image vulnerability scan 
+
+To run it properly you must define in yours local mashine ENV-s, `TAG` and `ENV`.
+`TAG` is related to tag wich will be alined to docker image. example - latest, 1.0.1...
+`ENV` is related to which enviroment you want to deploy. examle - prod or dev
+
+## Run - remote
+
+Remote is similar as local option but in that case you must change definition in Treafik for certificates (you can't create cerificate via that option
+for internal domain) in files -> docker-compose-prod.yaml and treafik/treafik.prod.toml
+
+# Update - new steps -- END
+
+
 A Django '`Hello World <https://en.wikipedia.org/wiki/%22Hello,_World!%22_program>`_' program example.
 
 Installation
