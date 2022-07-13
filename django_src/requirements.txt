@@ -1,6 +1,6 @@
 # requirements.txt file
-Django==2.2.3
-gunicorn==20.0.4
+Django==4.0.6
+gunicorn==20.1.0
 django-environ==0.4.5
 whitenoise==5.2.0
 psycopg2-binary==2.9.3

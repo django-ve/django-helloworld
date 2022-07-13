@@ -1,5 +1,5 @@
 # app/Dockerfile
-FROM python:3.9.5-slim
+FROM python:3.9.13-slim
 
 # set work directory
 WORKDIR /app

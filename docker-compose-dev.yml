@@ -20,7 +20,9 @@ services:
       - "traefik.enable=true"
       - "traefik.http.routers.django.rule=Host(`django.localhost`)"
   db:
-    image: postgres:13-alpine
+    build:
+      context: ./postgres
+      dockerfile: Dockerfile.dev
     volumes:
       - postgres_data:/var/lib/postgresql/data/
     expose:

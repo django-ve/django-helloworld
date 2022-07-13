@@ -20,7 +20,9 @@ services:
       - "traefik.http.routers.django.tls=true"
       - "traefik.http.routers.django.tls.certresolver=letsencrypt"
   db:
-    image: postgres:13-alpine
+    build:
+      context: ./postgres
+      dockerfile: Dockerfile.prod
     volumes:
       - postgres_data_prod:/var/lib/postgresql/data/
     expose:

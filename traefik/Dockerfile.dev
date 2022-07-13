@@ -1,5 +1,8 @@
 # Dockerfile.traefik
 
-FROM traefik:v2.2
+FROM traefik:v2.8.1
 
 COPY ./traefik.dev.toml ./etc/traefik/traefik.toml
+
+RUN apk update 
+RUN apk upgrade

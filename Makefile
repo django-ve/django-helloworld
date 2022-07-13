@@ -18,7 +18,7 @@ endif
 trivy-scan:
 	docker run -u 0 --rm -v /var/run/docker.sock:/var/run/docker.sock aquasec/trivy image --ignore-unfixed django-helloworld_web:$(TAG) 
 	docker run -u 0 --rm -v /var/run/docker.sock:/var/run/docker.sock aquasec/trivy image --ignore-unfixed django-helloworld_traefik:$(TAG) 
-	docker run -u 0 --rm -v /var/run/docker.sock:/var/run/docker.sock aquasec/trivy image --ignore-unfixed postgres:13-alpine
+	docker run -u 0 --rm -v /var/run/docker.sock:/var/run/docker.sock aquasec/trivy image --ignore-unfixed django-helloworld_db:$(TAG) 
 
 build:
 	$(info Make: Building "$(ENV)" environment images.)
