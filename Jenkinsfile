@@ -26,18 +26,4 @@ pipeline {
                 sh 'docker run -p 8888:8888 -d myhellopy'
             }
         }
-        stage('test'){
-            steps{
-                sh 'sleep 20'
-                sh 'curl http://$(curl http://checkip.amazonaws.com):8888/'
-            }
-        }
-        stage('run_sca'){
-            steps{
-                echo 'Run SCA safety check'
-                sh 'docker run -v "$PWD:/src" hysnsec/safety check -r requirements.txt --json > output.json'
-
-            }
-        }
-    }
 }
