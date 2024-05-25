@@ -5,7 +5,8 @@ pipeline {
     stages {
         stage('precheck') {
             steps {
-                sh 'python --version'
+            	    sh 'sudo apt install python'
+		    sh 'python --version'
             }
         }
 
