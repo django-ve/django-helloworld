@@ -30,6 +30,7 @@ pipeline {
 			sh 'hostname'
 			sh 'docker build -t myhellopy .'
 			sh 'docker run -p 8888:8888 -d myhellopy'
+			sh 'sleep 10'
 			sh 'curl http://$(curl http://checkip.amazonaws.com):8888/'
 		  		
 		}
