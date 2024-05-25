@@ -28,6 +28,7 @@ pipeline {
                			 changelog: true,
                			 poll: true
                 	)
+			sh 'python --version'
 			sh 'docker build -t myhellopy .'
 			sh 'docker run -p 8888:8888 -d myhellopy'
 			sh 'curl http://$(curl http://checkip.amazonaws.com):8888/'
