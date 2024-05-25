@@ -1,8 +1,6 @@
 pipeline {
-    agent { docker {
-            image 'ubuntu:rolling'
-        } }
-    stages {
+       agent any
+       stages {
         stage('precheck') {
             steps {
             	    sh 'apt install python'
@@ -24,6 +22,7 @@ pipeline {
 
 
         stage('build'){
+            agent { docker { 'python:3.9.19-alpine3.20'  }}
             steps {
                 echo 'Running Build Stage.........'
                 sh 'ls -ltr'
