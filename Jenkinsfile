@@ -18,9 +18,7 @@ pipeline {
             }
         }
 	stage('Build App'){
-		agent {
-		   docker { image 'python:3.9.19-alpine3.20' } 
-		}
+		agent any
 		steps {
 			git(
         		        url:  'git@github.com:mkpmanish/django-helloworld.git',
