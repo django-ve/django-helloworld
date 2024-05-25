@@ -26,7 +26,6 @@ pipeline {
                			 changelog: true,
                			 poll: true
                 	)
-			sh 'python --version'
 			sh 'uname -a'
 			sh 'hostname'
 			sh 'docker build -t myhellopy .'
