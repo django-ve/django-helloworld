@@ -24,7 +24,8 @@ pipeline {
 
         stage('build'){
             steps {
-                sh 'ls -ltr;whoami;date;'
+                echo 'Running Build Stage.........'
+                sh 'ls -ltr'
                 sh 'docker build -t myhellopy .'
                 sh 'docker run -p 8888:8888 -d myhellopy'
             }
