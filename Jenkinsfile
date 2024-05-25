@@ -23,6 +23,9 @@ pipeline {
 
 
         stage('build'){
+		agent { docker {
+                    image 'python:3.12.1-alpine3.19'
+             }
             steps {
                 echo 'Running Build Stage.........'
                 sh 'ls -ltr'
