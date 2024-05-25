@@ -35,5 +35,11 @@ pipeline {
 		  		
 		}
 	}
+	stage(){
+		steps{
+			sh 'docker run --user $(id -u):$(id -g) -v $(pwd):/zap/wrk:rw --rm  ghcr.io/zaproxy/zaproxy:stable zap-baseline.py -t http://$(curl http://checkip.amazonaws.com):8888/ -J zapoutput.json'
+			sh 'cat zapoutput.json'
+		}
+	}
     }
 }
