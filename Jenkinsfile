@@ -1,13 +1,5 @@
 pipeline {
        agent any
-       stages {
-        stage('precheck') {
-            steps {
-            	    sh 'apt install python'
-		    sh 'python --version'
-            }
-        }
-
 
         stage('git clone'){
             steps {
