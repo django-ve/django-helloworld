@@ -4,7 +4,7 @@ pipeline {
 	  stage("Pre-cleanup"){
 		agent any
 		steps{
-			sh 'docker run -v "$PWD:/src" hysnsec/safety check -r requirements.txt --json > output.json'
+			sh 'if [ $(docker ps | awk "{print $1}" | tail -1) ];then docker stop $(docker ps | awk "{print $1}" | tail -1);fi'
 		}
 	}
 	stage('Build App'){
