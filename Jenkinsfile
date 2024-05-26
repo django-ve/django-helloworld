@@ -38,7 +38,7 @@ pipeline {
 	stage("Run ZAP"){
 		agent any
 		steps{
-			sh 'docker run --user $(id -u):$(id -g) -v $(pwd):/zap:rw  -v $(pwd):/zap/wrk:rw --rm  ghcr.io/zaproxy/zaproxy:stable zap-baseline.py -t http://$(curl http://checkip.amazonaws.com):8888/ '
+			sh 'docker run -t --user $(id -u):$(id -g) -v /tmp:/zap:rw  -v $(pwd):/zap/wrk:rw --rm  ghcr.io/zaproxy/zaproxy:stable zap-baseline.py -t http://$(curl http://checkip.amazonaws.com):8888/ '
 		}
 	}
     }
