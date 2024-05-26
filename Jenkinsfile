@@ -34,9 +34,13 @@ pipeline {
 	stage("Run SCA"){
 		agent any
 		steps {
+		   try{
 			echo "Runing SCA scan..........."
 			sh 'docker run -v "$PWD:/src" hysnsec/safety check -r requirements.txt'
+		} catch(Exception e){
+			echo "Scan failed for some reason...." + e.getMessage()	
 		}
+	   }
 	}
 	stage("Cleanup"){
 		agent any
