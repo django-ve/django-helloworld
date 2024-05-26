@@ -1,12 +1,6 @@
 pipeline {
     agent none
     stages {
-	  stage("Pre-cleanup"){
-		agent any
-		steps{
-			sh 'docker stop $(docker ps | awk "{print $1}" | tail -1)'
-		}
-	}
 	stage('Build App'){
 		agent any
 		steps {
