@@ -35,7 +35,7 @@ pipeline {
 		agent any
 		steps {
 			echo "Runing SCA scan..........."
-			sh 'docker run -v "$PWD:/src" hysnsec/safety check -r requirements.txt --json > output.json'
+			sh 'docker run -v "$PWD:/src" hysnsec/safety check -r requirements.txt'
 		}
 	}
 	stage("Cleanup"){
