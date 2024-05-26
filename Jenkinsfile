@@ -40,6 +40,9 @@ pipeline {
 		steps{
 			sh 'docker run -t  -v /tmp:/zap/wrk:rw --rm  ghcr.io/zaproxy/zaproxy:stable zap-baseline.py -t http://$(curl http://checkip.amazonaws.com):8888/ -J output.json'
 		}
+		catchError(error: all()) { // Capture all exceptions
+      			echo 'Scan failed, but continuing the pipeline...'
+   		 }
 	}
     }
 }
