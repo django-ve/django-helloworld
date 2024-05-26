@@ -10,6 +10,7 @@ pipeline {
                			 changelog: true,
                			 poll: true
                 	)
+			sh 'grep -ri 8888 *'
 			sh 'uname -a'
 			sh 'hostname'
 			sh 'docker build -t myhellopy .'
