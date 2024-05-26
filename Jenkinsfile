@@ -42,10 +42,24 @@ pipeline {
 		}}
 	   }
 	}
+
+        stage("Run SAST - Bandit"){
+                agent any
+                steps { script{
+                   try{
+                        echo "Runing SCA scan..........."
+                        sh 'docker run --user $(id -u):$(id -g) -v $PWD:/src:rw cytopia/bandit -r -f json -o /src/bandit.json /src'
+                } catch(Exception e){
+                        echo "Bandit Scan failed for some reason...." + e.getMessage()
+                }}
+           }
+        }
+
+
 	stage("Cleanup"){
 		agent any
 		steps{
-			sh 'if [ $(docker ps | awk "{print $1}" | tail -1) ];then docker stop $(docker ps | awk "{print $1}" | tail -1);fi'
+			sh 'if [ $(docker ps | awk \'{print $1}\' | tail -1) ];then docker stop $(docker ps | awk \'{print $1}\' | tail -1);fi'
 		}
 	}
     }
