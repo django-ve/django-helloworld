@@ -7,7 +7,6 @@ pipeline {
 			sh 'docker run -v "$PWD:/src" hysnsec/safety check -r requirements.txt --json > output.json'
 		}
 	}
-	stage("Cleanup"){
 	stage('Build App'){
 		agent any
 		steps {
