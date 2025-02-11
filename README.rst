@@ -104,3 +104,18 @@ the *Django Admin Interface* like this:
    :alt: Django Admin Interface running
 
    Django Admin Interface running
+
+Building with docker
+====================
+
+::
+
+    $ docker build --tag=helloworld .
+
+::
+
+    $ docker run -p 4000:8000 helloworld 
+
+::
+
+    $ curl localhost:4000
