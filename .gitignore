@@ -7,5 +7,6 @@
 *.pyo
 build/
 dist/
-helloworld.db
+*.db
+*.sqlite3
 local_settings.py

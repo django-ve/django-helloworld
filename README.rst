@@ -14,22 +14,28 @@ the following command:
 
 ::
 
-  $ sudo apt update
+  $ sudo apt update && sudo apt upgrade
 
 Install necessary minimum dependencies, with the following command:
 
 ::
 
-  $ sudo apt install python3-dev python3-pip python3-virtualenv sqlitebrowser
+  $ sudo apt install python3-dev python3-pip python3-virtualenv
 
 For run this example need to install Django framework
 executing the follow command:
 
 ::
 
-    $ sudo pip install -r requirements.txt
+    $ sudo pip3 install -r requirements.txt
 
-And later followed by:
+And later to test the Django Installation is done with the following command:
+
+::
+
+    $ python -m django --version
+    5.1.6
+
 
 ::
 
@@ -40,9 +46,8 @@ At which point you should see:
 ::
 
     Operations to perform:
-      Apply all migrations: admin, auth, contenttypes, sessions, sites
+      Apply all migrations: admin, auth, contenttypes, sessions
     Running migrations:
-
       Applying contenttypes.0001_initial... OK
       Applying auth.0001_initial... OK
       Applying admin.0001_initial... OK
@@ -57,9 +62,10 @@ At which point you should see:
       Applying auth.0007_alter_validators_add_error_messages... OK
       Applying auth.0008_alter_user_username_max_length... OK
       Applying auth.0009_alter_user_last_name_max_length... OK
+      Applying auth.0010_alter_group_name_max_length... OK
+      Applying auth.0011_update_proxy_permissions... OK
+      Applying auth.0012_alter_user_first_name_max_length... OK
       Applying sessions.0001_initial... OK
-      Applying sites.0001_initial... OK
-      Applying sites.0002_alter_domain_unique... OK
 
 
 For use the Django Admin Interface, it's needed to create a superuser 
@@ -108,14 +114,26 @@ the *Django Admin Interface* like this:
 Building with docker
 ====================
 
+Building image with the following command:
+
 ::
 
     $ docker build --tag=helloworld .
+
+
+Running the container with the following command:
 
 ::
 
     $ docker run -p 4000:8000 helloworld 
 
+
+Requesting the URL http://localhost:4000 with the following command:
+
 ::
 
     $ curl localhost:4000
+
+
+Also you can request the URL http://localhost:4000 in your web browser
+you can see the hello world example.

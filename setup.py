@@ -14,7 +14,7 @@ CLASSIFIERS = [
     # Indicate supported versions, Python 2, Python 3 or both.
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.5",
+    "Programming Language :: Python :: 3.11",
     "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
     "Topic :: Internet :: WWW/HTTP :: WSGI",
     "Topic :: Software Development",
@@ -30,7 +30,7 @@ def read(fname):
 
 setup(
     name="django-helloworld",
-    version="0.1",
+    version="0.2",
     description="A Django 'Hello World' program example",
     long_description=read('README.rst'),
     classifiers=CLASSIFIERS,
@@ -42,7 +42,7 @@ setup(
     url="https://github.com/django-ve/django-helloworld",
     license="GPL",
     platforms="OS Independent",
-    install_requires=["Django==4.2.18"],
+    install_requires=["Django==5.1.6"],
     packages=find_packages(exclude=EXCLUDE_FROM_PACKAGES),
     include_package_data=True,
     zip_safe=False,
