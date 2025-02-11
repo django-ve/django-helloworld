@@ -111,6 +111,31 @@ the *Django Admin Interface* like this:
 
    Django Admin Interface running
 
+
+Running the testing
+===================
+
+Running the ``helloworld`` application tests with the following command:
+
+::
+
+    $ python3 manage.py test helloworld.tests
+
+At which point you should see:
+
+::
+
+    Found 2 test(s).
+    Creating test database for alias 'default'...
+    System check identified no issues (0 silenced).
+    ..
+    ----------------------------------------------------------------------
+    Ran 2 tests in 1.017s
+
+    OK
+    Destroying test database for alias 'default'...
+
+
 Building with docker
 ====================
 
