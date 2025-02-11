@@ -114,18 +114,32 @@ the *Django Admin Interface* like this:
 Building with docker
 ====================
 
-Building image with the following command:
+Building ``helloworld`` image with the following command:
 
 ::
 
     $ docker build --tag=helloworld .
 
 
-Running the container with the following command:
+Running the ``django-helloworld`` container with the following command:
 
 ::
 
-    $ docker run -p 4000:8000 helloworld 
+    $ docker run docker run -p 4000:8000 --name django-helloworld -d helloworld
+
+
+Checking the ``django-helloworld`` logs with the following command:
+
+::
+
+    $ docker logs -f django-helloworld
+
+
+Stoping the ``django-helloworld`` container with the following command:
+
+::
+
+    $ docker stop django-helloworld
 
 
 Requesting the URL http://localhost:4000 with the following command:
@@ -133,7 +147,13 @@ Requesting the URL http://localhost:4000 with the following command:
 ::
 
     $ curl localhost:4000
+    Hello, world!
 
 
 Also you can request the URL http://localhost:4000 in your web browser
 you can see the hello world example.
+
+.. figure:: https://github.com/django-ve/django-helloworld/raw/master/docs/django_helloword_docker.png
+   :width: 315px
+   :align: center
+   :alt: A Django 'Hello World' example from a Docker container
