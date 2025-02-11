@@ -2,7 +2,7 @@
 django-helloworld
 =================
 
-A Django '`Hello World <https://en.wikipedia.org/wiki/%22Hello,_World!%22_program>`_' program example.
+This is a Django `Hello World <https://en.wikipedia.org/wiki/%22Hello,_World!%22_program>`_ example.
 
 Installation
 ============
@@ -22,8 +22,8 @@ Install necessary minimum dependencies, with the following command:
 
   $ sudo apt install python3-dev python3-pip python3-virtualenv sqlitebrowser
 
-For run this example need to install Django
-framework execute the follow command:
+For run this example need to install Django framework
+executing the follow command:
 
 ::
 
