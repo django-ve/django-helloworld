@@ -108,14 +108,26 @@ the *Django Admin Interface* like this:
 Building with docker
 ====================
 
+Building image with the following command:
+
 ::
 
     $ docker build --tag=helloworld .
+
+
+Running the container with the following command:
 
 ::
 
     $ docker run -p 4000:8000 helloworld 
 
+
+Requesting the URL http://localhost:4000 with the following command:
+
 ::
 
     $ curl localhost:4000
+
+
+Also you can request the URL http://localhost:4000 in your web browser
+you can see the hello world example.
