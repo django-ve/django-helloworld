@@ -33,7 +33,7 @@ And later to test the Django Installation is done with the following command:
 
 ::
 
-    $ python -m django --version
+    $ python3 -m django --version
     5.1.6
 
 
@@ -97,9 +97,9 @@ see the hello world example like this:
 .. figure:: https://github.com/django-ve/django-helloworld/raw/master/docs/django_helloword.png
    :width: 315px
    :align: center
-   :alt: A Django 'Hello World' program example
+   :alt: A Django 'Hello World' application example
 
-   A Django 'Hello World' program example
+   A Django 'Hello World' application example
 
 Also you can open in your web browser the URL http://127.0.0.1:8000/admin for access to 
 the *Django Admin Interface* like this:
@@ -110,6 +110,31 @@ the *Django Admin Interface* like this:
    :alt: Django Admin Interface running
 
    Django Admin Interface running
+
+
+Running the testing
+===================
+
+Running the ``helloworld`` application tests with the following command:
+
+::
+
+    $ python3 manage.py test helloworld.tests
+
+At which point you should see:
+
+::
+
+    Found 2 test(s).
+    Creating test database for alias 'default'...
+    System check identified no issues (0 silenced).
+    ..
+    ----------------------------------------------------------------------
+    Ran 2 tests in 1.017s
+
+    OK
+    Destroying test database for alias 'default'...
+
 
 Building with docker
 ====================
@@ -147,6 +172,11 @@ Requesting the URL http://localhost:4000 with the following command:
 ::
 
     $ curl localhost:4000
+
+At which point you should see:
+
+::
+
     Hello, world!
 
 
