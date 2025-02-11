@@ -1,2 +1,2 @@
 # requirements.txt file
-Django==4.2.18
+Django==5.1.6
