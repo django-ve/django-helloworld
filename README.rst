@@ -14,13 +14,13 @@ the following command:
 
 ::
 
-  $ sudo apt update && sudo apt upgrade
+  $ sudo apt update && sudo apt upgrade -y
 
 Install necessary minimum dependencies, with the following command:
 
 ::
 
-  $ sudo apt install python3-dev python3-pip python3-virtualenv
+  $ sudo apt install -y python3-dev python3-pip python3-virtualenv
 
 For run this example need to install Django framework
 executing the follow command:
