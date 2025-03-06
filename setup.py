@@ -42,7 +42,7 @@ setup(
     url="https://github.com/django-ve/django-helloworld",
     license="GPL",
     platforms="OS Independent",
-    install_requires=["Django==5.1.6"],
+    install_requires=["Django==5.1.7"],
     packages=find_packages(exclude=EXCLUDE_FROM_PACKAGES),
     include_package_data=True,
     zip_safe=False,
